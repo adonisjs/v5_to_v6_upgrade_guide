@@ -3,11 +3,8 @@
 The **"Update ESLint and Prettier setup"** patch will update your existing ESLint config and Prettier config files to use the new base configuration shipped with v6 apps.
 
 
-:::warning
-
-If you are using a custom setup for both ESLint and Prettier, then you can skip patch. However, then you will have manually update `eslint` and its plugins and ensure they work smoothly with an ESM application.
-
-:::
+> [!WARNING]
+> If you are using a custom setup for both ESLint and Prettier, then you can skip patch. However, then you will have manually update `eslint` and its plugins and ensure they work smoothly with an ESM application.
 
 Following are the steps performed by this patch.
 
@@ -38,7 +35,7 @@ The following packages have been removed in favour of a single base configuratio
 
 ## Temporary rules
 
-We disable the following ESLint rules temporarily to make migration from `v5 -> v6` smoother. 
+We disable the following ESLint rules temporarily to make migration from `v5 -> v6` smoother.
 
 ```json
 "rules": {
@@ -49,10 +46,10 @@ We disable the following ESLint rules temporarily to make migration from `v5 -> 
 ```
 
 - `@typescript-eslint/explicit-member-accessibility`: In v6 we no longer use TypeScript class property modifiers like `public`, or `private`. Instead we use JavaScript native private properties prefixed with a `#`.
-    
+
     \
     However, removing property modifiers from an entire codebase can be a tedious task and therefore we turn off this rule temporarily. If needed, you can turn it back on after the migration is completed and your app is in working state.
-    
+
 - `unicorn/filename-case`: In v6, we opted for a `snake_case` naming convention for the naming folders and files. Again, to make migration smooth, we turn off the ESLint rule.
 
 - `@typescript-eslint/no-shadow` is a newly added rule and might force you to refactor your application codebase. We turn off this rule to make migration process smooth.

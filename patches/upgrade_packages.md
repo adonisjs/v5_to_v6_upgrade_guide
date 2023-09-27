@@ -2,13 +2,8 @@
 
 The **"upgrade packages"** patch will update official AdonisJS packages, remove the deprecated one's and install the new one's.
 
-
-:::warning
-
-We recommend you to commit your code before applying the patch and verify the changes after applying the patch.
-
-
-:::
+> [!WARNING]
+> We recommend you to commit your code before applying the patch and verify the changes after applying the patch.
 
 Following are the steps performed by this patch.
 
