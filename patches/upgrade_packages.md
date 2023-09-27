@@ -35,6 +35,8 @@ Following are the steps performed by this patch.
 
 - `@types/node` to have types for Node.js.
 - `@adonisjs/validator` - The validator module from v5 is in legacy mode and we recommend using VineJS for new apps. However, for smoother upgrade experience, we install the `@adonisjs/validator` package, which brings the v5 validation module to v6 apps.
+- `@adonisjs/cors` - The CORS source code has been moved to its own package. The patch will install and configure this package if there is an `config/cors.ts` file.
+- `@adonisjs/static` - The source code to serve static files has been moved to its own package. The patch will install and configure this package if there is a `config/static.ts` file.
 
 ## Providers updated
 
