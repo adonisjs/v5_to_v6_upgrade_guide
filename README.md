@@ -1,6 +1,7 @@
 # Upgrading from AdonisJS v5 to v6
 
-> **Warning** - This is a work in progress guide and not in usable state as of now. Feel free to read it, but do not attempt to migrate your apps until v6 is officially released.
+> [!WARNING]
+> This is a work in progress guide and not in usable state as of now. Feel free to read it, but do not attempt to migrate your apps until v6 is officially released.
 
 ## Patches
 The migration guide will come along with a migration CLI tool to apply patches to your application in order to make migration simpler and quicker.
