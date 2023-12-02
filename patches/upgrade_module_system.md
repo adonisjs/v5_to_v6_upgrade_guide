@@ -8,3 +8,4 @@ Upgrade module system from CommonJS to ESM. It involves the following steps.
     ```json
     "strictPropertyInitialization": false,
     ```
+- Remove every `@adonisjs/*` and `@japa/*` types included inside `tsconfig.json`. These types are not needed anymore. Just importing the different modules in your codebase will allow TypeScript to pick the types.
