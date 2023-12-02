@@ -19,7 +19,7 @@ Following is the initial list of patches.
 - [Migrate to newer AdonisJS imports](./patches/migrate_to_newer_imports.md)
 - [Fix relative imports to use file extensions](./patches/fix_relative_imports.md)
 - [Update Env validations code](./patches/update_env_validations_code.md)
-- [Update config files](./patches/update_config_files.md)
+- [Upgrade config files](./patches/upgrade_config_files.md.md)
 - [Move to newer file structure for entry point files](./patches/upgrade_entrypoints.md)
 - [Upgrade command options](./patches/upgrade_commands_options.md)
 - [Upgrade AdonisRC file (Should be the last patch)](./patches/upgrade_adonisrc_file.md)

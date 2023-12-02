@@ -9,14 +9,7 @@ Following are the steps performed by this patch.
 
 ## Packages upgraded
 
-- `@adonisjs/assembler`
-- `@adonisjs/core`
-- `@adonisjs/lucid`
-- `@adonisjs/session`
-- `@adonisjs/shield`
-- `@adonisjs/view`
-- `@japa/browser-client`
-- `@japa/runner`
+- Every `@adonisjs` and `@japa` packages will be upgraded to the latest version.
 - `pino-pretty`
 
 ## Packages removed
@@ -26,6 +19,7 @@ Following are the steps performed by this patch.
 
 ## Packages swapped
 
+- `@adonisjs/view` swapped with `edge.js`. The `@adonisjs/view` package was a wrapper on top of `edge.js`. We decided to directly use the `edge.js` package.
 - `phc-argon2` swapped with `argon2`. The `phc-argon2` was a wrapper on top of `argon2`. We decided to no longer use the wrapper and rely on the base implementation directly.
 - `phc-bcrypt` swapped with `bcrypt`. The `phc-bcrypt` was a wrapper on top of `bcrypt`. We decided to no longer use the wrapper and rely on the base implementation directly.
 - `@japa/preset-adonis` in swapped with `@japa/plugin-adonisjs`.
@@ -55,7 +49,7 @@ Since AdonisJS packages exports Service providers, this patch will also update t
 
 ```diff
 - "@adonisjs/view"
-+ "@adonisjs/view/view_provider"
++ "@adonisjs/core/providers/edge_provider"
 ```
 
 ```diff
@@ -66,6 +60,26 @@ Since AdonisJS packages exports Service providers, this patch will also update t
 ```diff
 - "@adonisjs/lucid"
 + "@adonisjs/lucid/database_provider"
+```
+
+```diff
+- "@adonisjs/redis"
++ "@adonisjs/redis/redis_provider"
+```
+
+```diff
+- "@adonisjs/mail"
++ "@adonisjs/mail/mail_provider"
+```
+
+```diff
+- "@adonisjs/ally"
++ "@adonisjs/ally/ally_provider"
+```
+
+```diff
+- "@adonisjs/auth"
++ "@adonisjs/auth/auth_provider"
 ```
 
 ```diff

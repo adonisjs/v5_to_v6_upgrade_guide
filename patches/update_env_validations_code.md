@@ -11,6 +11,6 @@ Following are the steps performed by this patch.
     - export default Env.rules({
     + export default await Env.create(new URL('../', import.meta.url), {
     ```
-    
+- Delete the `contracts/env.ts` file
 
 That's all!
