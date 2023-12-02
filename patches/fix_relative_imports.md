@@ -8,6 +8,7 @@ However, you will have to rewrite the relative imports to match the following ru
 
 - All imports must specify the file extension. For example: Instead of writing `import User from './user'`, you will have to write `import User from './user.js'`.
 - Even for TypeScript files, the file extension has to be `.js`.
+- Only exception to the above rule is when importing a file with a [subpath pattern](https://nodejs.org/api/packages.html#subpath-patterns) we defined through the [`upgrade-aliases`](./upgrade_aliases.md) patch. For example, `import User from '#models/user' is valid.
 - Index files are no longer imported by specifying the directory name.  For example:
 
     ```ts
@@ -17,6 +18,6 @@ However, you will have to rewrite the relative imports to match the following ru
     // ❌ Works with CJS, but not ESM
     import InvoiceService from './services/invoice'
     ```
-    
-    
+
 This patch will fix the relative imports in your application code and make them compatible with ESM.
+As with previous patches, this patch will **NOT** update dynamic imports.
