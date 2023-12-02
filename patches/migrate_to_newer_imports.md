@@ -2,6 +2,10 @@
 
 The **"migrate AdonisJS imports"** patch removes the existing `@ioc` prefixed imports from your application source in favor of new standard ESM imports.
 
+Multiple things to note : 
+- This patch can be relatively slow for large codebases since it has to traverse all the files and replace the imports.
+- This patch will not update dynamic imports.
+
 ## History of `@ioc` prefixed imports
 
 AdonisJS uses the IoC Container to distribute pre-configured services like the `router`, `mailer`, `emitter`, and so on. For example, if you want an instance of the mailer, you can write the following code.
@@ -27,6 +31,6 @@ Behind the scenes, we use the TypeScript compiler API to rewrite the import as a
 
 Cut to v6. We are eliminating all this complexity and homegrown style of `@ioc` imports. This patch will rewrite the imports for you, so you do not have to replace them.
 
-## What imports have been written.
+## What imports have been written
 
-Share link to imports map we have got.
+See this [file](https://github.com/adonisjs/upgrade-kit/blob/main/src/rewrite_maps.ts#L0-L1) where we defined the list of imports to rewrite.
