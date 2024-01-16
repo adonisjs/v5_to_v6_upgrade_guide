@@ -1,0 +1,39 @@
+@component('layouts/main', { file })
+  @let(siteConfig = await getConfig())
+
+  @component('docs::header', siteConfig)
+    @slot('logo')
+      @include('partials/logo')
+    @end
+
+    @slot('logoMobile')
+      @include('partials/logo_mobile')
+    @end
+  @end
+
+  <section layout-shell>
+    @!component('docs::sidebar', {
+      collapsible: true,
+      sections: getSections(collection, entry)
+    })
+
+    <main layout-main>
+      @!component('docs::content_header', { title: file.frontmatter.title })
+
+      @component('docs::content', {
+        title: file.frontmatter.title,
+        copyright: siteConfig.copyright,
+        fileEditUrl: `${siteConfig.fileEditBaseUrl}/${app.relativePath(file.filePath)}`,
+      })
+        @!component('docs::doc_errors', { messages: file.messages })
+        @!component('dimer_contents', { nodes: file.ast.children, pipeline })~
+      @end
+
+      @if(file.toc)
+        @component('docs::toc', { sponsors: siteConfig.advertising_sponsors })
+          @!component('dimer_element', { node: file.toc, pipeline })~
+        @end
+      @end
+    </main>
+  </section>
+@end

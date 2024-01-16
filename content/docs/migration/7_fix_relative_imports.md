@@ -1,5 +1,24 @@
 # Fix relative imports
 
+This patch will fix the relative imports in your application code and make them compatible with ESM.
+
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit fix-relative-imports
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit fix-relative-imports
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit fix-relative-imports
+```
+:::
+
 Since, AdonisJS applications are written in TypeScript, which uses the `import/export` syntax while authoring the code, you are somewhat protected when it comes to the number of breaking changes while moving from CommonJS to ESM.
 
 For example, you do not have to remove `module.exports`, `require` method calls.
@@ -8,7 +27,7 @@ However, you will have to rewrite the relative imports to match the following ru
 
 - All imports must specify the file extension. For example: Instead of writing `import User from './user'`, you will have to write `import User from './user.js'`.
 - Even for TypeScript files, the file extension has to be `.js`.
-- Only exception to the above rule is when importing a file with a [subpath pattern](https://nodejs.org/api/packages.html#subpath-patterns) we defined through the [`upgrade-aliases`](./upgrade_aliases.md) patch. For example, `import User from '#models/user' is valid.
+- Only exception to the above rule is when importing a file with a [subpath pattern](https://nodejs.org/api/packages.html#subpath-patterns) we defined through the [`upgrade-aliases`](./5_upgrade_aliases.md) patch. For example, `import User from '#models/user' is valid.
 - Index files are no longer imported by specifying the directory name.  For example:
 
     ```ts

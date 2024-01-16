@@ -1,10 +1,12 @@
 # Migrate a package to v6
 
+If you are the maintainer of an AdonisJS package, this guide is definitely for you. We will try to cover the major changes that you need to make to your package to make it compatible with AdonisJS v6.
+
 ## Update Tooling
 
-Make sure to keep an eye on [`pkg-starter-kit`](https://github.com/adonisjs/pkg-starter-kit) repo for the tooling configuration as inspiration. 
+Make sure to keep an eye on [`pkg-starter-kit`](https://github.com/adonisjs/pkg-starter-kit) repo for the tooling configuration as inspiration for the following steps.
 
-### ESM
+### ESM 
 
 Just add `type: module` to your `package.json`
 

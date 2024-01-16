@@ -1,8 +1,25 @@
 # Upgrade Config Files
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-config-files
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-config-files
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-config-files
+```
+:::
+
 This patch will update the configuration files defined in `config/*.ts` to use the new configuration structure. Some of config files will be left untouched, since they are quite difficult to migrate automatically and can be manually updated easily in some minutes.
 
-So make sure to read the [breaking changes](../other_breaking_changes.md) guide to know about the changes in the config files, and update them manually if required.
+So make sure to read the [breaking changes](../other/other_breaking_changes.md) guide to know about the changes in the config files, and update them manually if required.
 
 ## Config files updated
 

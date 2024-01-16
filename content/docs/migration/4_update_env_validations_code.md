@@ -2,6 +2,23 @@
 
 The **"update env validation code"** patch will updates the `env.ts` file to be compatible with the new API. 
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-env-config
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-env-config
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-env-config
+```
+:::
+
 Following are the steps performed by this patch.
 
 - Move `env.ts` to `start/env.ts` file.

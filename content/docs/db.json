@@ -1,0 +1,104 @@
+[
+  {
+    "permalink": "introduction",
+    "title": "Introduction",
+    "contentPath": "./introduction.md",
+    "category": "Guides"
+  },
+  {
+    "permalink": "upgrade-kit",
+    "title": "Introduction",
+    "category": "Migration guide",
+    "contentPath": "./migration/upgrade_kit.md"
+  },
+  {
+    "permalink": "upgrade-packages",
+    "title": "1. Upgrade Packages",
+    "category": "Migration guide",
+    "contentPath": "./migration/1_upgrade_packages.md"
+  },
+  {
+    "permalink": "upgrade-module-system",
+    "title": "2. Upgrade Module System",
+    "category": "Migration guide",
+    "contentPath": "./migration/2_update_module_system.md"
+  },
+  {
+    "permalink": "upgrade-eslint-prettier",
+    "title": "3. Upgrade ESLint and Prettier",
+    "category": "Migration guide",
+    "contentPath": "./migration/3_update_eslint_prettier_setup.md"
+  },
+  {
+    "permalink": "upgrade-env-config",
+    "title": "4. Upgrade Env Config",
+    "category": "Migration guide",
+    "contentPath": "./migration/4_update_env_validations_code.md"
+  },
+  {
+    "permalink": "upgrade-aliases",
+    "title": "5. Upgrade Aliases",
+    "category": "Migration guide",
+    "contentPath": "./migration/5_upgrade_aliases.md"
+  },
+  {
+    "permalink": "migrate-ioc-imports",
+    "title": "6. Migrate IOC Imports",
+    "category": "Migration guide",
+    "contentPath": "./migration/6_migrate_to_newer_imports.md"
+  },
+  {
+    "permalink": "fix-relative-imports",
+    "title": "7. Fix Relative Imports",
+    "category": "Migration guide",
+    "contentPath": "./migration/7_fix_relative_imports.md"
+  },
+  {
+    "permalink": "upgrade-entrypoints",
+    "title": "8. Upgrade Entrypoints",
+    "category": "Migration guide",
+    "contentPath": "./migration/8_upgrade_entrypoints.md"
+  },
+  {
+    "permalink": "upgrade-config-files",
+    "title": "9. Upgrade Config Files",
+    "category": "Migration guide",
+    "contentPath": "./migration/9_upgrade_config_files.md"
+  },
+  {
+    "permalink": "upgrade-command-options",
+    "title": "10. Upgrade Command Options",
+    "category": "Migration guide",
+    "contentPath": "./migration/10_upgrade_commands_options.md"
+  },
+  {
+    "permalink": "upgrade-rcfile",
+    "title": "11. Upgrade RC File",
+    "category": "Migration guide",
+    "contentPath": "./migration/11_upgrade_adonisrc_file.md"
+  },
+  {
+    "permalink": "next-steps",
+    "title": "Next Steps",
+    "category": "Migration guide",
+    "contentPath": "./migration/next_steps.md"
+  },
+  {
+    "permalink": "package-migration",
+    "title": "Package migration",
+    "category": "Other",
+    "contentPath": "./migrate_package.md"
+  },
+  {
+    "permalink": "other-breaking-changes",
+    "title": "Other breaking changes",
+    "category": "Other",
+    "contentPath": "./other/other_breaking_changes.md"
+  },
+  {
+    "permalink": "stick-to-v5",
+    "title": "Stick to v5",
+    "category": "Other",
+    "contentPath": "./other/stick_to_v5.md"
+  }
+]

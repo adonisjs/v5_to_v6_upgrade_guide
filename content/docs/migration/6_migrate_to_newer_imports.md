@@ -2,6 +2,23 @@
 
 The **"migrate AdonisJS imports"** patch removes the existing `@ioc` prefixed imports from your application source in favor of new standard ESM imports.
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit migrate-ioc-imports
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit migrate-ioc-imports
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit migrate-ioc-imports
+```
+:::
+
 Multiple things to note : 
 - This patch can be relatively slow for large codebases since it has to traverse all the files and replace the imports.
 - This patch will not update dynamic imports.

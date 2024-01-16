@@ -1,3 +1,7 @@
+# Other breaking changes
+
+Here's a list of some breaking changes that are not covered by the patches provided by the upgrade-kit.
+
 ## Encryption package
 - Zero breaking changes in the functional API
 

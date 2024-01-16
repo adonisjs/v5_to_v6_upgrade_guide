@@ -2,6 +2,23 @@
 
 This patch will migrate the commands options to the new structure.
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-command-options
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-command-options
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-command-options
+```
+:::
+
 With V5, the command options were defined as follows:
 
 ```ts

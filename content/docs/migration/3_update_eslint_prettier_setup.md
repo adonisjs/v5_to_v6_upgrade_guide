@@ -3,8 +3,26 @@
 The **"Update ESLint and Prettier setup"** patch will update your existing ESLint config and Prettier config files to use the new base configuration shipped with v6 apps.
 
 
-> [!WARNING]
-> If you are using a custom setup for both ESLint and Prettier, then you can skip patch. However, then you will have manually update `eslint` and its plugins and ensure they work smoothly with an ESM application.
+:::warning
+If you are using a custom setup for both ESLint and Prettier, then you can skip patch. However, then you will have manually update `eslint` and its plugins and ensure they work smoothly with an ESM application.
+:::
+
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-eslint-prettier
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-eslint-prettier
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-eslint-prettier
+```
+:::
 
 Following are the steps performed by this patch.
 

@@ -2,9 +2,22 @@
 
 The **"update module system"** patch moves your application from CommonJS to ESM.
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-module-system
+```
 
-> [!WARNING]
-> We recommend you to commit your code before applying the patch and verify the changes after applying the patch.
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-module-system
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-module-system
+```
+:::
 
 Following are the steps performed by this patch.
 

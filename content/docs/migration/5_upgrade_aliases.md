@@ -2,6 +2,23 @@
 
 The **"Upgrade aliases"** patch migrates your application from AdonisJS aliases to [Node.js sub-path imports](https://nodejs.org/dist/latest-v20.x/docs/api/packages.html#subpath-imports). Sub-path imports is a platform feature supported natively by Node.js and therefore we will embrace it with v6 applications.
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-aliases
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-aliases
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-aliases
+```
+:::
+
 Following are the steps performed by this patch.
 
 ## Config files updated

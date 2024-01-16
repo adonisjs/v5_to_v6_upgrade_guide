@@ -1,5 +1,22 @@
 # Upgrade Rc File
 
+:::codegroup
+```sh
+// title: npm
+npx @adonisjs/upgrade-kit upgrade-rcfile
+```
+
+```sh
+// title: pnpm
+pnpm exec @adonisjs/upgrade-kit upgrade-rcfile
+```
+
+```sh
+// title: yarn
+yarn dlx @adonisjs/upgrade-kit upgrade-rcfile
+```
+:::
+
 With V5, the `.adonisrc.json` file was used to a lot of things like defining aliases, commands, providers, etc.
 
 With V6, the `.adonisrc.json` file is no longer used. Instead, we use the `adonisrc.ts` file to define all these things, for two main reasons:
