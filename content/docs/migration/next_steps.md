@@ -26,6 +26,10 @@ Earlier, we defined the logger configuration in `config/app.ts`. We now have mov
 
 See [documentation](https://v6-alpha.adonisjs.com/docs/logger#configuration) and the [web-starter-kit](https://github.com/adonisjs/web-starter-kit/blob/main/config/logger.ts) for an example.
 
+### Remove the profiler configuration
+
+The profiler was never documented and is now removed. Remove the profiler configuration from `config/app.ts`.
+
 ## Update your Exception Handler
 
 Update your Exception Handler using [the new API](https://v6-alpha.adonisjs.com/docs/exception-handling). 
@@ -56,8 +60,50 @@ Add the middleware `container_bindings.ts` to the `app/middleware` folder and al
 
 ## Migrate the @adonisjs/auth middleware
 
-## (Optional) Move contracts/* files to config/* files
+## ( Optional ) Move contracts/* files to config/* files
+
+With V5, we defined some typings on the `contracts` folder. We now have moved them directly in the associated `config` file. For example, the `contracts/hash.ts` file on V5 looks like this:
+
+```ts
+// title: contracts/hash,ts
+import type { InferListFromConfig } from '@adonisjs/core/build/config'
+import type hashConfig from '../config/hash'
+
+declare module '@ioc:Adonis/Core/Hash' {
+  interface HashersList extends InferListFromConfig<typeof hashConfig> {}
+}
+```
+
+Now, with V6, you could only have the `config/hash.ts` file:
+
+```ts
+// title: config/hash.ts
+
+import { defineConfig, drivers } from '@adonisjs/core/hash'
+
+const hashConfig = defineConfig({
+  default: 'scrypt',
+  list: {
+    scrypt: drivers.scrypt({
+      cost: 16384,
+      blockSize: 8,
+      parallelization: 1,
+      maxMemory: 33554432,
+    }),
+  },
+})
+
+export default hashConfig
+
+/**
+ * Inferring types for the list of hashers you have configured
+ * in your application.
+ */
+declare module '@adonisjs/core/types' {
+  export interface HashersList extends InferHashers<typeof hashConfig> {}
+}
+```
 
 ## Migrate edge breaking changes
 
-
+AdonisJS 6 comes with a new version of Edge. See the [Edge migration guide](https://edgejs.dev/docs/changelog/upgrading-to-v6) and update your views accordingly.
