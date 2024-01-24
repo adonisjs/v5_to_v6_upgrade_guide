@@ -29,7 +29,7 @@ pnpm add @adonisjs/encore
 Once done, you must run the following command to configure the mail package.
 
 ```sh
-node ace configure @adonisjs/mail
+node ace configure @adonisjs/encore
 ```
 
 
