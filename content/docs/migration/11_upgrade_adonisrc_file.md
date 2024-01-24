@@ -1,6 +1,7 @@
 # Upgrade Rc File
 
 :::codegroup
+
 ```sh
 // title: npm
 npx @adonisjs/upgrade-kit upgrade-rcfile
@@ -15,6 +16,7 @@ pnpm exec @adonisjs/upgrade-kit upgrade-rcfile
 // title: yarn
 yarn dlx @adonisjs/upgrade-kit upgrade-rcfile
 ```
+
 :::
 
 With V5, the `.adonisrc.json` file was used to a lot of things like defining aliases, commands, providers, etc.

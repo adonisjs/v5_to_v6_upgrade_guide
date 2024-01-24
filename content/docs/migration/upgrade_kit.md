@@ -2,19 +2,20 @@
 
 In this guide we gonna cover everything you need to know to migrate your AdonisJS v5 application to v6. First, let's introduce the `upgrade-kit` CLI tool.
 
-## Upgrade Kit 
+## Upgrade Kit
 
-The `Upgrade Kit` is a CLI tool that will help you migrate your AdonisJS v5 application to v6. It is built on using `ts-morph` so it is able to parse and modify your Typescript files directly. It probably won't be cover all the work needed to migrate your application, but it will take care of the most tedious and boring parts. 
+The `Upgrade Kit` is a CLI tool that will help you migrate your AdonisJS v5 application to v6. It is built on using `ts-morph` so it is able to parse and modify your Typescript files directly. It probably won't be cover all the work needed to migrate your application, but it will take care of the most tedious and boring parts.
 
-The upgrade kit has multiples patches that **must be applied in a specific order**. After executing a patch, **make sure to review the changes**, commit them, and then execute the next patch. 
+The upgrade kit has multiples patches that **must be applied in a specific order**. After executing a patch, **make sure to review the changes**, commit them, and then execute the next patch.
 
 Some codemods are difficult to write perfectly, because we have to take into account a lot of different cases of writing code. So, it is possible that some patches will not be able to migrate your code correctly. In this case, you can always fix the code manually, by following the the instructions for each patch just below. Otherwise, feel free to also open an issue on the [Upgrade Kit repository](https://github.com/adonisjs/upgrade-kit) and we will try to fix it as soon as possible.
 
 ## Installation
 
-First you need to install the upgrade kit globally : 
+First you need to install the upgrade kit globally :
 
 :::codegroup
+
 ```sh
 // title: npm
 npm i -g @adonisjs/upgrade-kit
@@ -29,14 +30,15 @@ pnpm i -g @adonisjs/upgrade-kit
 // title: yarn
 yarn global add @adonisjs/upgrade-kit
 ```
+
 :::
 
+## Usage
 
-## Usage 
-
-To use the upgrade kit, you can run the following command. 
+To use the upgrade kit, you can run the following command.
 
 :::codegroup
+
 ```sh
 // title: npm
 npx @adonisjs/upgrade-kit {patchName} --path=/path/to/your/project
@@ -51,6 +53,7 @@ pnpm exec @adonisjs/upgrade-kit {patchName} --path=/path/to/your/project
 // title: yarn
 yarn dlx @adonisjs/upgrade-kit {patchName} --path=/path/to/your/project
 ```
+
 :::
 
 - `{patchName}` should be replaced by the name of one of the patches listed below
@@ -116,8 +119,6 @@ Fix relative imports and add `.js` extensions ( needed for ESM ).
 
 See [Fix relative imports to use file extensions](./7_fix_relative_imports.md)
 
-
-
 ### Move to newer file structure for entry point files
 
 Patch name : `upgrade-entrypoints`
@@ -152,4 +153,4 @@ See [Upgrade AdonisRC file](./11_upgrade_adonisrc_file.md)
 
 ## Next steps
 
-After applying all patches, you are ready to make last manual cha
+After applying all patches, you are ready to make last manual changes.

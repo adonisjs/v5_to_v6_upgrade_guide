@@ -3,6 +3,7 @@
 The **"upgrade packages"** patch will update official AdonisJS packages, remove the deprecated one's and install the new one's.
 
 :::codegroup
+
 ```sh
 // title: npm
 npx @adonisjs/upgrade-kit upgrade-packages
@@ -17,6 +18,7 @@ pnpm exec @adonisjs/upgrade-kit upgrade-packages
 // title: yarn
 yarn dlx @adonisjs/upgrade-kit upgrade-packages
 ```
+
 :::
 
 Following are the steps performed by this patch.

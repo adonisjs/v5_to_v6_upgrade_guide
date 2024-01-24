@@ -3,6 +3,7 @@
 The **"Upgrade entrypoints"** patch migrates your application entrypoints to use the new ones needed for running AdonisJS v6.
 
 :::codegroup
+
 ```sh
 // title: npm
 npx @adonisjs/upgrade-kit upgrade-entrypoints
@@ -17,6 +18,7 @@ pnpm exec @adonisjs/upgrade-kit upgrade-entrypoints
 // title: yarn
 yarn dlx @adonisjs/upgrade-kit upgrade-entrypoints
 ```
+
 :::
 
 - We will add 3 new entrypoints files, `bin/console.ts`, `bin/test.ts` and `bin/server.ts`. You can find the source code for these files in the [`web-starter-kit`](https://github.com/adonisjs/web-starter-kit/tree/main/bin) repository.

@@ -3,34 +3,42 @@
 Here's a list of some breaking changes that are not covered by the patches provided by the upgrade-kit.
 
 ## Encryption package
+
 - Zero breaking changes in the functional API
 
 ## Env
+
 - Zero breaking changes in the functional API
 
 ## Config
-- Remove undocumented `Config.merge` method. 
+
+- Remove undocumented `Config.merge` method.
 
 ## Logger
+
 - Zero breaking changes in the functional API.
 - Add support for multiple loggers.
 - Upgrade to latest version of Pino.
 
 ## Events
+
 - Remove deprecated `trap` and `trapAll` methods.
 - Remove `namespace` method. Since we are opting for standard imports and not magic string based imports, the `namespace` method is no longer relevant.
 - Add assertion methods like `assertNoneEmitted`, `assertNotEmitted`, `assertEmitted`.
 
 ## Bodyparser
+
 - Remove `file.moveToDisk` method from the bodyparser source code. However, you can still use this method if you have `@adonisjs/drive` package installed.
 - Removed `queryString` config option from raw bodyparser config block. The option was unused and hence has no breaking change at runtime, but will give static type error.
 - Add support for `convertEmptyStringsToNull` for JSON parser as well.
 - rename `whitelistedMethods` property to `allowedMethods`.
 
 ## Session
+
 - Add `@adonisjs/session/session_middleware` to the middleware list in order to enable sessions. In v5, it was not needed.
 
 ## Encore
+
 - No breaking changes
 
 ## Mail
@@ -46,19 +54,18 @@ Here's a list of some breaking changes that are not covered by the patches provi
 ## Hash
 
 - Remove `Hash.isFaked` property since it serves no use case.
-- The `Hash.extend` method signature has been changed. 
+- The `Hash.extend` method signature has been changed.
 
-    ```ts
-    // Earlier
-    Hash.extend('md5', (manager, mappingName, config) => {
-      console.log(manager === Hash) // true
-    })
-    
-    // Now
-    Hash.extend('md5', (config) => {
-    })
-    ```
-    
+  ```ts
+  // Earlier
+  Hash.extend('md5', (manager, mappingName, config) => {
+    console.log(manager === Hash) // true
+  })
+
+  // Now
+  Hash.extend('md5', (config) => {})
+  ```
+
 ## Repl
 
 - Zero functional breaking changes.
@@ -82,7 +89,6 @@ The application module has also received significant breaking changes. Please co
 - https://github.com/adonisjs/application/releases/tag/v6.3.0-0
 - https://github.com/adonisjs/application/releases/tag/v6.8.0-0
 
-
 ## Http server
 
 The Http server module has received significant changes. Please refer to the following release notes.
@@ -91,17 +97,14 @@ The Http server module has received significant changes. Please refer to the fol
 - https://github.com/adonisjs/http-server/releases/tag/v6.1.0-0
 - https://github.com/adonisjs/http-server/releases/tag/v6.2.0-0
 
-
 ## Shield
 
 - Remove DNS prefetching guard, since it is not a standard feature anymore. https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
-
 
 ## i18n
 
 - Rename `i18nManager.getSupportedLocale` to `i18nManager.getSupportedLocaleFor`.
 - Rename `i18nManager.getFallbackLocale` to `i18nManager.getFallbackLocaleFor`.
-
 
 ## Redis
 

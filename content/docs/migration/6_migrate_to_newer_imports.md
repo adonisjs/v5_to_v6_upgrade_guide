@@ -3,6 +3,7 @@
 The **"migrate AdonisJS imports"** patch removes the existing `@ioc` prefixed imports from your application source in favor of new standard ESM imports.
 
 :::codegroup
+
 ```sh
 // title: npm
 npx @adonisjs/upgrade-kit migrate-ioc-imports
@@ -17,9 +18,11 @@ pnpm exec @adonisjs/upgrade-kit migrate-ioc-imports
 // title: yarn
 yarn dlx @adonisjs/upgrade-kit migrate-ioc-imports
 ```
+
 :::
 
-Multiple things to note : 
+Multiple things to note :
+
 - This patch can be relatively slow for large codebases since it has to traverse all the files and replace the imports.
 - This patch will not update dynamic imports.
 
@@ -44,7 +47,6 @@ Behind the scenes, we use the TypeScript compiler API to rewrite the import as a
 - The `@ioc` import feels alien since it is particular to AdonisJS.
 - We must rely on the TypeScript official compiler API to rewrite the import. Hence, we cannot use faster tools like SWC or ESBuild.
 - We have to separately define the `@ioc: Adonis/Addons/Mail` types because the TypeScript compiler cannot resolve this module using its filesystem resolution logic.
-
 
 Cut to v6. We are eliminating all this complexity and homegrown style of `@ioc` imports. This patch will rewrite the imports for you, so you do not have to replace them.
 

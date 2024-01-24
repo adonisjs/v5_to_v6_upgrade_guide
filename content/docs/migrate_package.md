@@ -6,7 +6,7 @@ If you are the maintainer of an AdonisJS package, this guide is definitely for y
 
 Make sure to keep an eye on [`pkg-starter-kit`](https://github.com/adonisjs/pkg-starter-kit) repo for the tooling configuration as inspiration for the following steps.
 
-### ESM 
+### ESM
 
 Just add `type: module` to your `package.json`
 
@@ -41,7 +41,7 @@ Then add this to your `package.json` file
 
 Make sure you also remove `.eslintrc.json` and `.eslintignore` from your project if they exist.
 
-### Typescript 
+### Typescript
 
 Install the following packages:
 
@@ -58,7 +58,7 @@ Then update your `tsconfig.json` like this:
   "extends": "@adonisjs/tsconfig/tsconfig.package.json",
   "compilerOptions": {
     "rootDir": "./",
-    "outDir": "./build",
+    "outDir": "./build"
   }
 }
 ```
@@ -93,7 +93,7 @@ For example, to launch your tests, you can define this script in your `package.j
 ```json
 {
   "scripts": {
-    "test": "node --import=./tsnode.esm.js --enable-source-maps bin/test.ts",
+    "test": "node --import=./tsnode.esm.js --enable-source-maps bin/test.ts"
   }
 }
 ```
@@ -108,7 +108,7 @@ Make sure you update all dependencies to @adonis and @japa in your `package.json
 {
   "peerDependencies": {
     "@adonisjs/core": "^6.2.0"
-  },
+  }
 }
 ```
 
@@ -119,23 +119,25 @@ Previously, we used an `instructions.ts` to allow the user to configure the pack
 You can delete the `adonisjs` field from your `package.json` which is no longer in use, also as the `instructions.ts` and `instructions.md` files. ( Keep instruction.ts though, as part of it can be re-used )
 
 Now, to have this configuration logic, you'll need to define a `configure` method, and re-export it from the entrypoint ( `index.ts` ) of your package like this :
-  - https://github.com/adonisjs/pkg-starter-kit/blob/main/index.ts
-  - https://github.com/adonisjs/pkg-starter-kit/blob/main/configure.ts
 
+- https://github.com/adonisjs/pkg-starter-kit/blob/main/index.ts
+- https://github.com/adonisjs/pkg-starter-kit/blob/main/configure.ts
 
-This `configure` method will be called by Adonis when the user launches `node ace configure my-package`. 
+This `configure` method will be called by Adonis when the user launches `node ace configure my-package`.
 One point to note is that `@adonisjs/sink` is deprecated. Instead, the `configure` method receives a `ConfigureCommand` object as a parameter, which does the same thing as `@adonisjs/sink` but with a more powerful API.
 
 There's a lot to say about the new API, so I recommend that you:
+
 - Read the documentation here: https://github.com/adonisjs/assembler?tab=readme-ov-file#codemods
 - take some inspiration from the `configure` in the official packages. For example, the `configure` command in `@adonisjs/mail`: https://github.com/adonisjs/mail/blob/develop/configure.ts
 
 ### Stubs/templates
 
-Before, we used to use a `templates` folder in which we put `.txt` files which were copied with `sink` via `instructions.ts` file. Now you need to : 
+Before, we used to use a `templates` folder in which we put `.txt` files which were copied with `sink` via `instructions.ts` file. Now you need to :
 
 - Create a `stubs` folder at the root of your project.
 - Add a `main.ts` to this folder containing this code:
+
   ```ts
   import { dirname } from 'node:path'
   import { fileURLToPath } from 'node:url'
@@ -150,28 +152,32 @@ Before, we used to use a `templates` folder in which we put `.txt` files which w
 - Then you can create a `.stub` file in this folder. Let's imagine a `config.stub` that should be copied into the `config` folder of the user's project. You can do it like this:
 
   ```ts
-  {{{
-    exports({ to: app.configPath('my_package_config.ts') })
-  }}}
+  {
+    {
+      {
+        exports({ to: app.configPath('my_package_config.ts') })
+      }
+    }
+  }
 
   import { defineConfig } from 'my-package'
 
   export default defineConfig({
     // ...
-    myProperty: '{{ myProperty }}'
+    myProperty: '{{ myProperty }}',
   })
   ```
 
   You can read more about stub syntax here: https://v6-alpha.adonisjs.com/docs/scaffolding#stubs
 
 - Next, make sure you copy your stub files to the final build folder at build time. You can do this as follows:
-  
+
   ```json
   {
     "scripts": {
       "copy:templates": "copyfiles \"stubs/**/*.stub\" build",
       "build": "tsc",
-      "postbuild": "npm run copy:templates",
+      "postbuild": "npm run copy:templates"
     }
   }
   ```
@@ -210,14 +216,15 @@ You should know everything you need to know to migrate your provider.
 
 ## `adonis-typings`
 
-If you've been following the previous section, you'll notice that we no longer use `@ioc` imports at all. 
+If you've been following the previous section, you'll notice that we no longer use `@ioc` imports at all.
 The user will import your functions/services/classes directly from your package. **As a result, the `adonis-typings` folder and its contents are no longer needed**, which is a real time-saver for you, and also much simpler to maintain, as there's no additional place to update just for having correct typings.
 
 ## Commands
 
-In case your package provides some commands to the user's application, you have a few modifications to make. 
+In case your package provides some commands to the user's application, you have a few modifications to make.
 
 Previously:
+
 - You defined your commands in `adonisjs.commands` of your `package.json`. As a reminder, the `adonisjs` property in `package.json` is now deprecated. You can delete it.
 - You had a `commands/index.ts` which exported an array of commands. This file is no longer used. You can delete it.
 
@@ -240,7 +247,7 @@ Then, in your `postbuild`, you now need to use `adonis-kit`, which is a CLI tool
     "copy:templates": "copyfiles \"stubs/**/*.stub\" build",
     "build": "tsc",
     "postbuild": "npm run copy:templates && npm run index:commands",
-    "index:commands": "adonis-kit index build/commands",
+    "index:commands": "adonis-kit index build/commands"
   }
 }
 ```
@@ -251,16 +258,12 @@ And that's it.
 
 Make sure you upgrade to Japa V3. Read the migration guide here: https://japa.dev/docs/uprade-guide
 
-Otherwise, I invite you to take a look at the tests of different official package to see how they are now written. Here are a few key points: 
+Otherwise, I invite you to take a look at the tests of different official package to see how they are now written. Here are a few key points:
 
 - Most packages now export `factories` which allow you to test your code more easily when you need an instance of something. You can access them via `import { xxxFactory } from '@adonisjs/pkg'`.
-- In the past, when we needed to start an Adonis application for testing, you'd use big helpers like `setupApp` in which you had to make a bunch of boilerplates, create files on the filesystem... This is no longer necessary. 
+- In the past, when we needed to start an Adonis application for testing, you'd use big helpers like `setupApp` in which you had to make a bunch of boilerplates, create files on the filesystem... This is no longer necessary.
+
   - Example on `@adonisjs/mail` for version 5: https://github.com/adonisjs/mail/blob/68addd6bc952b7a4d545459455627652ac21e908/test-helpers/index.ts#L16
   - Example on `@adonisjs/mail` for version 6: https://github.com/adonisjs/mail/blob/develop/tests/integration/mail_provider.spec.ts#L25
 
   So you can create an application via the IgnitorFactory, pass options for each of the different packages, pass adonisrc file options... Much simpler.
-
-
-
-
-

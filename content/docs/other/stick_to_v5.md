@@ -47,14 +47,14 @@ If you want to stick to v5, you should have the same major versions as the follo
 
 ```jsonc
 {
-   "@japa/api-client": "1.4.2",
-   "@japa/browser-client": "^1.2.0",
-   "@japa/expect": "^2.0.2",
-   "@japa/file-system": "^1.1.0",
-   "@japa/preset-adonis": "^1.2.0",
-   "@japa/run-failed-tests": "^1.1.1",
-   "@japa/runner": "^2.5.1",
-   "@japa/snapshot": "1.0.1-3",
-   "@japa/spec-reporter": "^1.3.3",
+  "@japa/api-client": "1.4.2",
+  "@japa/browser-client": "^1.2.0",
+  "@japa/expect": "^2.0.2",
+  "@japa/file-system": "^1.1.0",
+  "@japa/preset-adonis": "^1.2.0",
+  "@japa/run-failed-tests": "^1.1.1",
+  "@japa/runner": "^2.5.1",
+  "@japa/snapshot": "1.0.1-3",
+  "@japa/spec-reporter": "^1.3.3",
 }
 ```

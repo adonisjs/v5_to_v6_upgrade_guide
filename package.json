@@ -11,13 +11,15 @@
     "start": "node bin/test.js",
     "serve": "node --loader=ts-node/esm bin/serve.ts",
     "dev": "concurrently \"vite\" \"npm run serve\"",
-    "test": "node ace test"
+    "test": "node ace test",
+    "format": "prettier --write ."
   },
   "imports": {
     "#src/*": "./src/*.js"
   },
   "devDependencies": {
     "@adonisjs/assembler": "^7.0.0",
+    "@adonisjs/prettier-config": "^1.2.1",
     "@adonisjs/tsconfig": "^1.2.1",
     "@adonisjs/vite": "^2.0.2",
     "@alpinejs/collapse": "^3.13.3",
@@ -36,6 +38,7 @@
     "edge-uikit": "^1.0.0-0",
     "medium-zoom": "^1.1.0",
     "pino-pretty": "^10.3.1",
+    "prettier": "^3.2.4",
     "reflect-metadata": "^0.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3",
@@ -48,5 +51,6 @@
     "@adonisjs/static": "^1.1.1",
     "@radix-ui/colors": "^3.0.0",
     "edge.js": "^6.0.1"
-  }
+  },
+  "prettier": "@adonisjs/prettier-config"
 }

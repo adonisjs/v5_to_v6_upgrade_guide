@@ -3,6 +3,7 @@
 The **"update module system"** patch moves your application from CommonJS to ESM.
 
 :::codegroup
+
 ```sh
 // title: npm
 npx @adonisjs/upgrade-kit upgrade-module-system
@@ -17,6 +18,7 @@ pnpm exec @adonisjs/upgrade-kit upgrade-module-system
 // title: yarn
 yarn dlx @adonisjs/upgrade-kit upgrade-module-system
 ```
+
 :::
 
 Following are the steps performed by this patch.
@@ -25,22 +27,22 @@ Following are the steps performed by this patch.
 - Make `tsconfig.json` file extend the new base config from `@adonisjs/tsconfig` package.
 - Remove unnecessary known types from the `compilerOptions.types` array.
 
-    ```json
-    {
-      "compilerOptions": {
-        "types": [
-            "@adonisjs/core",
-            "@adonisjs/repl",
-            "@adonisjs/session",
-            "@adonisjs/view",
-            "@adonisjs/shield",
-            "@adonisjs/lucid",
-            "@adonisjs/auth",
-            "@adonisjs/lucid-slugify",
-            "@adonisjs/drive-s3",
-            "@adonisjs/attachment-lite",
-            "@japa/preset-adonis/build/adonis-typings"
-        ]
-      }
+  ```json
+  {
+    "compilerOptions": {
+      "types": [
+        "@adonisjs/core",
+        "@adonisjs/repl",
+        "@adonisjs/session",
+        "@adonisjs/view",
+        "@adonisjs/shield",
+        "@adonisjs/lucid",
+        "@adonisjs/auth",
+        "@adonisjs/lucid-slugify",
+        "@adonisjs/drive-s3",
+        "@adonisjs/attachment-lite",
+        "@japa/preset-adonis/build/adonis-typings"
+      ]
     }
-    ```
+  }
+  ```
