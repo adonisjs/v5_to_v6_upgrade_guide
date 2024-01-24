@@ -15,7 +15,7 @@ import { renderer } from './bootstrap.js'
 const docs = new Collection()
   .db(new URL('../content/docs/db.json', import.meta.url))
   .useRenderer(renderer)
-  .urlPrefix('/docs')
+  .urlPrefix('/guides')
 
 await docs.boot()
 
