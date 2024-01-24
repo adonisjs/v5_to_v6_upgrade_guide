@@ -50,6 +50,10 @@ Update the `tests/bootstrap.ts` file using the new configuration system. Take th
 
 ( Optional ) Migrate to the new Adonis 6 routing system. Remove all string-based routes and use [real controller imports](https://v6-alpha.adonisjs.com/docs/controllers#lazy-loading-controllers).
 
+## ( Optional ) Migrate from Webpack Encore to Vite
+
+Vite is now the recommended way to build your frontend assets. See the [migration guide](../other/vite_migration.md) to migrate from Webpack Encore to Vite.
+
 ## Update the `start/kernel.ts` file
 
 Update the `start/kernel.ts` file using the [new API](https://github.com/adonisjs/web-starter-kit/blob/main/start/kernel.ts).

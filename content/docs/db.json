@@ -84,16 +84,22 @@
     "contentPath": "./migration/next_steps.md"
   },
   {
-    "permalink": "package-migration",
-    "title": "Package migration",
-    "category": "Other",
-    "contentPath": "./migrate_package.md"
-  },
-  {
     "permalink": "other-breaking-changes",
     "title": "Other breaking changes",
     "category": "Other",
     "contentPath": "./other/other_breaking_changes.md"
+  },
+  {
+    "permalink": "migrate-to-vite",
+    "title": "Migrate to Vite",
+    "category": "Other",
+    "contentPath": "./other/vite_migration.md"
+  },
+  {
+    "permalink": "package-migration",
+    "title": "Package migration",
+    "category": "Other",
+    "contentPath": "./migrate_package.md"
   },
   {
     "permalink": "stick-to-v5",
