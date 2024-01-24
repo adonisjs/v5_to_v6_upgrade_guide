@@ -1,3 +1,8 @@
+---
+title: AdonisJS Migration Guide
+summary: The migration guide for migrating from AdonisJS v5 to v6.
+---
+
 # Migration from AdonisJS v5 to v6
 
 This guide is a **work in progress** to help you migrate your existing (v5) AdonisJS applications to v6. In order to make the migration process a little easier, we have created a `upgrade-kit` CLI tool that applies patches on an existing codebase.
