@@ -90,6 +90,12 @@
     "contentPath": "./other/other_breaking_changes.md"
   },
   {
+    "permalink": "webpack-encore-docs",
+    "title": "Webpack Encore",
+    "category": "Legacy docs",
+    "contentPath": "./legacy_docs/encore.md"
+  },
+  {
     "permalink": "migrate-to-vite",
     "title": "Migrate to Vite",
     "category": "Other",
