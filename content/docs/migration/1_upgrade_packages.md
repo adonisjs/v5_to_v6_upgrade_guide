@@ -16,7 +16,7 @@ pnpm exec adonis-upgrade-kit upgrade-packages
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kitupgrade-packages
+yarn dlx adonis-upgrade-kit upgrade-packages
 ```
 
 :::

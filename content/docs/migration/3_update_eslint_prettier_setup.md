@@ -20,7 +20,7 @@ pnpm exec adonis-upgrade-kit upgrade-eslint-prettier
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kitupgrade-eslint-prettier
+yarn dlx adonis-upgrade-kit upgrade-eslint-prettier
 ```
 
 :::

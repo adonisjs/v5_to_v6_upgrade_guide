@@ -16,7 +16,7 @@ pnpm exec adonis-upgrade-kit upgrade-env-config
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kitupgrade-env-config
+yarn dlx adonis-upgrade-kit upgrade-env-config
 ```
 
 :::

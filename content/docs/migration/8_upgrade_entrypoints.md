@@ -16,7 +16,7 @@ pnpm exec adonis-upgrade-kit upgrade-entrypoints
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kitupgrade-entrypoints
+yarn dlx adonis-upgrade-kit upgrade-entrypoints
 ```
 
 :::

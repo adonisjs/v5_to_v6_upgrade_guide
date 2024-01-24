@@ -16,7 +16,7 @@ pnpm exec adonis-upgrade-kit migrate-ioc-imports
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kitmigrate-ioc-imports
+yarn dlx adonis-upgrade-kit migrate-ioc-imports
 ```
 
 :::

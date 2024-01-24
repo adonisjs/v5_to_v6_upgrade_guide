@@ -51,7 +51,7 @@ pnpm exec adonis-upgrade-kit {patchName} --path=/path/to/your/project
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kit{patchName} --path=/path/to/your/project
+yarn dlx adonis-upgrade-kit {patchName} --path=/path/to/your/project
 ```
 
 :::

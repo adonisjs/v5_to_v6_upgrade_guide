@@ -16,7 +16,7 @@ pnpm exec adonis-upgrade-kit fix-relative-imports
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kitfix-relative-imports
+yarn dlx adonis-upgrade-kit fix-relative-imports
 ```
 
 :::
