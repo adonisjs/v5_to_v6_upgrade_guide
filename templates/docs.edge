@@ -3,7 +3,11 @@
 
   @component('docs::header', siteConfig)
     @slot('logo')
-      @include('partials/logo')
+      <div class="logo_wrapper">
+        @include('partials/logo')
+        <span>|</span>
+        <span class="logo_suffix">Migration guide</span>
+      </div>
     @end
 
     @slot('logoMobile')

@@ -179,3 +179,13 @@ html.dark {
     width: 120%;
   }
 }
+
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo_suffix {
+  font-size: 14px;
+}
