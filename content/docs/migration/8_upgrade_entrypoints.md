@@ -6,17 +6,17 @@ The **"Upgrade entrypoints"** patch migrates your application entrypoints to use
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-entrypoints
+npx adonis-upgrade-kit upgrade-entrypoints
 ```
 
 ```sh
 // title: pnpm
-pnpm exec @adonisjs/upgrade-kit upgrade-entrypoints
+pnpm exec adonis-upgrade-kit upgrade-entrypoints
 ```
 
 ```sh
 // title: yarn
-yarn dlx @adonisjs/upgrade-kit upgrade-entrypoints
+yarn dlx adonis-upgrade-kitupgrade-entrypoints
 ```
 
 :::

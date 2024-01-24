@@ -6,17 +6,17 @@ This patch will fix the relative imports in your application code and make them 
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit fix-relative-imports
+npx adonis-upgrade-kit fix-relative-imports
 ```
 
 ```sh
 // title: pnpm
-pnpm exec @adonisjs/upgrade-kit fix-relative-imports
+pnpm exec adonis-upgrade-kit fix-relative-imports
 ```
 
 ```sh
 // title: yarn
-yarn dlx @adonisjs/upgrade-kit fix-relative-imports
+yarn dlx adonis-upgrade-kitfix-relative-imports
 ```
 
 :::

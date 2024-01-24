@@ -4,17 +4,17 @@
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-config-files
+npx adonis-upgrade-kit upgrade-config-files
 ```
 
 ```sh
 // title: pnpm
-pnpm exec @adonisjs/upgrade-kit upgrade-config-files
+pnpm exec adonis-upgrade-kit upgrade-config-files
 ```
 
 ```sh
 // title: yarn
-yarn dlx @adonisjs/upgrade-kit upgrade-config-files
+yarn dlx adonis-upgrade-kitupgrade-config-files
 ```
 
 :::

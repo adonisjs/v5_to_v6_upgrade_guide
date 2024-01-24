@@ -6,17 +6,17 @@ The **"Upgrade aliases"** patch migrates your application from AdonisJS aliases 
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-aliases
+npx adonis-upgrade-kit upgrade-aliases
 ```
 
 ```sh
 // title: pnpm
-pnpm exec @adonisjs/upgrade-kit upgrade-aliases
+pnpm exec adonis-upgrade-kit upgrade-aliases
 ```
 
 ```sh
 // title: yarn
-yarn dlx @adonisjs/upgrade-kit upgrade-aliases
+yarn dlx adonis-upgrade-kitupgrade-aliases
 ```
 
 :::

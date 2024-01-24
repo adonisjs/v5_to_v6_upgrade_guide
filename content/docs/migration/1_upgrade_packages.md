@@ -6,17 +6,17 @@ The **"upgrade packages"** patch will update official AdonisJS packages, remove 
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-packages
+npx adonis-upgrade-kit upgrade-packages
 ```
 
 ```sh
 // title: pnpm
-pnpm exec @adonisjs/upgrade-kit upgrade-packages
+pnpm exec adonis-upgrade-kit upgrade-packages
 ```
 
 ```sh
 // title: yarn
-yarn dlx @adonisjs/upgrade-kit upgrade-packages
+yarn dlx adonis-upgrade-kitupgrade-packages
 ```
 
 :::
