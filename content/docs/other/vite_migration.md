@@ -1,7 +1,5 @@
 # Migrate to Vite
 
-## Introduction
-
 Vite has become the de facto standard for building frontend applications. With V6 release, we ship an official integration for using Vite inside AdonisJS applications.
 
 We no longer recommend using Webpack Encore for new projects. However, we will continue to maintain this package for existing v5 applications.
