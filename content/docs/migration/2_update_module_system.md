@@ -6,12 +6,12 @@ The **"update module system"** patch moves your application from CommonJS to ESM
 
 ```sh
 // title: npm
-npx adonis-upgrade-kit upgrade-module-system
+npx @adonisjs/upgrade-kit upgrade-module-system
 ```
 
 ```sh
 // title: pnpm
-pnpm exec adonis-upgrade-kit upgrade-module-system
+pnpm dlx @adonisjs/upgrade-kit upgrade-module-system
 ```
 
 ```sh

@@ -4,12 +4,12 @@
 
 ```sh
 // title: npm
-npx adonis-upgrade-kit upgrade-rcfile
+npx @adonisjs/upgrade-kit upgrade-rcfile
 ```
 
 ```sh
 // title: pnpm
-pnpm exec adonis-upgrade-kit upgrade-rcfile
+pnpm dlx @adonisjs/upgrade-kit upgrade-rcfile
 ```
 
 ```sh

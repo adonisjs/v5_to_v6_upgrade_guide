@@ -10,12 +10,12 @@ If you are using a custom setup for both ESLint and Prettier, then you can skip 
 
 ```sh
 // title: npm
-npx adonis-upgrade-kit upgrade-eslint-prettier
+npx @adonisjs/upgrade-kit upgrade-eslint-prettier
 ```
 
 ```sh
 // title: pnpm
-pnpm exec adonis-upgrade-kit upgrade-eslint-prettier
+pnpm dlx @adonisjs/upgrade-kit upgrade-eslint-prettier
 ```
 
 ```sh
