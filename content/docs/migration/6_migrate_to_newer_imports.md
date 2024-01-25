@@ -6,17 +6,17 @@ The **"migrate AdonisJS imports"** patch removes the existing `@ioc` prefixed im
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit migrate-ioc-imports
+npx @adonisjs/upgrade-kit@latest migrate-ioc-imports
 ```
 
 ```sh
 // title: pnpm
-pnpm dlx @adonisjs/upgrade-kit migrate-ioc-imports
+pnpm dlx @adonisjs/upgrade-kit@latest migrate-ioc-imports
 ```
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kit migrate-ioc-imports
+yarn dlx adonis-upgrade-kit@latest migrate-ioc-imports
 ```
 
 :::

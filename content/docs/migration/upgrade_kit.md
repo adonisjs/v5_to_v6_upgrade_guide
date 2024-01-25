@@ -41,17 +41,17 @@ To use the upgrade kit, you can run the following command.
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit {patchName} --path=/path/to/your/project
+npx @adonisjs/upgrade-kit@latest {patchName} --path=/path/to/your/project
 ```
 
 ```sh
 // title: pnpm
-pnpm dlx @adonisjs/upgrade-kit {patchName} --path=/path/to/your/project
+pnpm dlx @adonisjs/upgrade-kit@latest {patchName} --path=/path/to/your/project
 ```
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kit {patchName} --path=/path/to/your/project
+yarn dlx adonis-upgrade-kit@latest {patchName} --path=/path/to/your/project
 ```
 
 :::

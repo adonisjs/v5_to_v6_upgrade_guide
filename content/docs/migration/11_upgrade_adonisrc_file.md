@@ -4,17 +4,17 @@
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-rcfile
+npx @adonisjs/upgrade-kit@latest upgrade-rcfile
 ```
 
 ```sh
 // title: pnpm
-pnpm dlx @adonisjs/upgrade-kit upgrade-rcfile
+pnpm dlx @adonisjs/upgrade-kit@latest upgrade-rcfile
 ```
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kit upgrade-rcfile
+yarn dlx adonis-upgrade-kit@latest upgrade-rcfile
 ```
 
 :::

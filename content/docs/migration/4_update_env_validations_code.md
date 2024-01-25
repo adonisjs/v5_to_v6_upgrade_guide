@@ -6,17 +6,17 @@ The **"update env validation code"** patch will updates the `env.ts` file to be 
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-env-config
+npx @adonisjs/upgrade-kit@latest upgrade-env-config
 ```
 
 ```sh
 // title: pnpm
-pnpm dlx @adonisjs/upgrade-kit upgrade-env-config
+pnpm dlx @adonisjs/upgrade-kit@latest upgrade-env-config
 ```
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kit upgrade-env-config
+yarn dlx adonis-upgrade-kit@latest upgrade-env-config
 ```
 
 :::

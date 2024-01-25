@@ -6,17 +6,17 @@ This patch will migrate the commands options to the new structure.
 
 ```sh
 // title: npm
-npx @adonisjs/upgrade-kit upgrade-command-options
+npx @adonisjs/upgrade-kit@latest upgrade-command-options
 ```
 
 ```sh
 // title: pnpm
-pnpm dlx @adonisjs/upgrade-kit upgrade-command-options
+pnpm dlx @adonisjs/upgrade-kit@latest upgrade-command-options
 ```
 
 ```sh
 // title: yarn
-yarn dlx adonis-upgrade-kit upgrade-command-options
+yarn dlx adonis-upgrade-kit@latest upgrade-command-options
 ```
 
 :::
