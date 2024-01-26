@@ -96,6 +96,36 @@
     "contentPath": "./legacy_docs/encore.md"
   },
   {
+    "permalink": "validator-introduction",
+    "title": "Introduction",
+    "category": "Legacy Validator Docs",
+    "contentPath": "./legacy_docs/validator/introduction.md"
+  },
+  {
+    "permalink": "validator-custom-messages",
+    "title": "Custom Messages",
+    "category": "Legacy Validator Docs",
+    "contentPath": "./legacy_docs/validator/custom_messages.md"
+  },
+  {
+    "permalink": "validator-error-reporters",
+    "title": "Error reporters",
+    "category": "Legacy Validator Docs",
+    "contentPath": "./legacy_docs/validator/error_reporters.md"
+  },
+  {
+    "permalink": "validator-schema-caching",
+    "title": "Schema Caching",
+    "category": "Legacy Validator Docs",
+    "contentPath": "./legacy_docs/validator/schema_caching.md"
+  },
+  {
+    "permalink": "validator-custom-validation-rules",
+    "title": "Custom validation rules",
+    "category": "Legacy Validator Docs",
+    "contentPath": "./legacy_docs/validator/custom_validation_rules.md"
+  },
+  {
     "permalink": "migrate-to-vite",
     "title": "Migrate to Vite",
     "category": "Other",
