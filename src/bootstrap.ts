@@ -73,7 +73,8 @@ edge.global('getSections', function (collection: Collection, entry: CollectionEn
  */
 const pipeline = new RenderingPipeline()
 pipeline.use(docsHook).use((node) => {
-  if (node.tagName === 'img') {
+  const src = node.properties?.src
+  if (node.tagName === 'img' && (typeof src === 'string' && !src.startsWith('http'))) {
     return pipeline.component('elements/img', { node })
   }
 })
