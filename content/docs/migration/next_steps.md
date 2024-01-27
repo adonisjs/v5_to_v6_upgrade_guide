@@ -69,7 +69,7 @@ Add the middleware `container_bindings.ts` to the `app/middleware` folder and al
 With V5, we defined some typings on the `contracts` folder. We now have moved them directly in the associated `config` file. For example, the `contracts/hash.ts` file on V5 looks like this:
 
 ```ts
-// title: contracts/hash,ts
+// title: contracts/hash.ts
 import type { InferListFromConfig } from '@adonisjs/core/build/config'
 import type hashConfig from '../config/hash'
 
