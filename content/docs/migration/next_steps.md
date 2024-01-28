@@ -24,7 +24,7 @@ Check the state of your `config/*.ts` files. It's more than likely that the upgr
 
 Earlier, we defined the logger configuration in `config/app.ts`. We now have moved it to `config/logger.ts` and changed its API.
 
-See [documentation](https://v6-alpha.adonisjs.com/docs/logger#configuration) and the [web-starter-kit](https://github.com/adonisjs/web-starter-kit/blob/main/config/logger.ts) for an example.
+See [documentation](https://docs.adonisjs.com/guides/logger#configuration) and the [web-starter-kit](https://github.com/adonisjs/web-starter-kit/blob/main/config/logger.ts) for an example.
 
 ### Remove the profiler configuration
 
@@ -32,7 +32,7 @@ The profiler was never documented and is now removed. Remove the profiler config
 
 ## Update your Exception Handler
 
-Update your Exception Handler using [the new API](https://v6-alpha.adonisjs.com/docs/exception-handling).
+Update your Exception Handler using [the new API](https://docs.adonisjs.com/guides/exception-handling).
 
 ## Update dynamic imports
 
@@ -48,7 +48,7 @@ Update the `tests/bootstrap.ts` file using the new configuration system. Take th
 
 ## ( Optional ) Migrate to the new Adonis 6 routing system
 
-( Optional ) Migrate to the new Adonis 6 routing system. Remove all string-based routes and use [real controller imports](https://v6-alpha.adonisjs.com/docs/controllers#lazy-loading-controllers).
+( Optional ) Migrate to the new Adonis 6 routing system. Remove all string-based routes and use [real controller imports](https://docs.adonisjs.com/guides/controllers#lazy-loading-controllers).
 
 ## ( Optional ) Migrate from Webpack Encore to Vite
 

@@ -168,7 +168,7 @@ Before, we used to use a `templates` folder in which we put `.txt` files which w
   })
   ```
 
-  You can read more about stub syntax here: https://v6-alpha.adonisjs.com/docs/scaffolding#stubs
+  You can read more about stub syntax here: https://docs.adonisjs.com/guides/scaffolding#using-stubs
 
 - Next, make sure you copy your stub files to the final build folder at build time. You can do this as follows:
 
@@ -205,8 +205,8 @@ The major change here will be the way dependencies are injected and resolved via
 
 Make sure you also read the following documentation:
 
-- https://v6-alpha.adonisjs.com/docs/fundamentals/ioc-container#container-bindings
-- https://v6-alpha.adonisjs.com/docs/fundamentals/container-services
+- https://docs.adonisjs.com/guides/ioc-container#container-bindings
+- https://docs.adonisjs.com/guides/container-services
 
 If you ever maintain a package that works with a driver system, I also invite you to read this post on `Config Providers` which will be essential for you:
 
