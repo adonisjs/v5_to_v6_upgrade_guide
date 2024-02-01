@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-aliases
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-aliases
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-aliases
-```
-
 :::
 
 Following are the steps performed by this patch.

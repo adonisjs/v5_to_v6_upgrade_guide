@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-module-system
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-module-system
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-module-system
-```
-
 :::
 
 Following are the steps performed by this patch.

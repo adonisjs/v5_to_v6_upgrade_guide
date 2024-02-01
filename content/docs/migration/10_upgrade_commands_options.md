@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-command-options
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-command-options
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-command-options
-```
-
 :::
 
 With V5, the command options were defined as follows:

@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest migrate-ioc-imports
 pnpm dlx @adonisjs/upgrade-kit@latest migrate-ioc-imports
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest migrate-ioc-imports
-```
-
 :::
 
 Multiple things to note :

@@ -49,11 +49,6 @@ npx @adonisjs/upgrade-kit@latest {patchName} --path=/path/to/your/project
 pnpm dlx @adonisjs/upgrade-kit@latest {patchName} --path=/path/to/your/project
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest {patchName} --path=/path/to/your/project
-```
-
 :::
 
 - `{patchName}` should be replaced by the name of one of the patches listed below

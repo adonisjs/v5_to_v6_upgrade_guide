@@ -12,11 +12,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-rcfile
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-rcfile
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-rcfile
-```
-
 :::
 
 With V5, the `.adonisrc.json` file was used to a lot of things like defining aliases, commands, providers, etc.

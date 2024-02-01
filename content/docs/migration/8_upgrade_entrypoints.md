@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-entrypoints
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-entrypoints
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-entrypoints
-```
-
 :::
 
 - We will add 3 new entrypoints files, `bin/console.ts`, `bin/test.ts` and `bin/server.ts`. You can find the source code for these files in the [`web-starter-kit`](https://github.com/adonisjs/web-starter-kit/tree/main/bin) repository.

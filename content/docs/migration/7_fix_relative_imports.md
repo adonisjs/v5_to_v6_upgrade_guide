@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest fix-relative-imports
 pnpm dlx @adonisjs/upgrade-kit@latest fix-relative-imports
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest fix-relative-imports
-```
-
 :::
 
 Since, AdonisJS applications are written in TypeScript, which uses the `import/export` syntax while authoring the code, you are somewhat protected when it comes to the number of breaking changes while moving from CommonJS to ESM.

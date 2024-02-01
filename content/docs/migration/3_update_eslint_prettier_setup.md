@@ -18,11 +18,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-eslint-prettier
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-eslint-prettier
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-eslint-prettier
-```
-
 :::
 
 Following are the steps performed by this patch.
@@ -64,7 +59,6 @@ We disable the following ESLint rules temporarily to make migration from `v5 -> 
 
 - `@typescript-eslint/explicit-member-accessibility`: In v6 we no longer use TypeScript class property modifiers like `public`, or `private`. Instead we use JavaScript native private properties prefixed with a `#`.
 
-  \
    However, removing property modifiers from an entire codebase can be a tedious task and therefore we turn off this rule temporarily. If needed, you can turn it back on after the migration is completed and your app is in working state.
 
 - `unicorn/filename-case`: In v6, we opted for a `snake_case` naming convention for the naming folders and files. Again, to make migration smooth, we turn off the ESLint rule.

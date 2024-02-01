@@ -14,11 +14,6 @@ npx @adonisjs/upgrade-kit@latest upgrade-packages
 pnpm dlx @adonisjs/upgrade-kit@latest upgrade-packages
 ```
 
-```sh
-// title: yarn
-yarn dlx adonis-upgrade-kit@latest upgrade-packages
-```
-
 :::
 
 Following are the steps performed by this patch.
@@ -38,7 +33,7 @@ Following are the steps performed by this patch.
 - `@adonisjs/view` swapped with `edge.js`. The `@adonisjs/view` package was a wrapper on top of `edge.js`. We decided to directly use the `edge.js` package.
 - `phc-argon2` swapped with `argon2`. The `phc-argon2` was a wrapper on top of `argon2`. We decided to no longer use the wrapper and rely on the base implementation directly.
 - `phc-bcrypt` swapped with `bcrypt`. The `phc-bcrypt` was a wrapper on top of `bcrypt`. We decided to no longer use the wrapper and rely on the base implementation directly.
-- `@japa/preset-adonis` in swapped with `@japa/plugin-adonisjs`.
+- `@japa/preset-adonis` is swapped with `@japa/plugin-adonisjs`.
 - `adonis-preset-ts` - The base configuration for TypeScript has been moved to `@adonisjs/tsconfig` package. Also, we will install `ts-node`, `@swc/core` packages to run TypeScript code without compiling it during development.
 
 ## Packages installed
