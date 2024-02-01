@@ -30,6 +30,10 @@ See [documentation](https://docs.adonisjs.com/guides/logger#configuration) and t
 
 The profiler was never documented and is now removed. Remove the profiler configuration from `config/app.ts`.
 
+### Remove the Assets bundler configuration
+
+The assets bundler doesn't need any configuration anymore. Remove the assets bundler configuration from `config/app.ts`.
+
 ## Update your Exception Handler
 
 Update your Exception Handler using [the new API](https://docs.adonisjs.com/guides/exception-handling).
@@ -49,10 +53,6 @@ Update the `tests/bootstrap.ts` file using the new configuration system. Take th
 ## ( Optional ) Migrate to the new Adonis 6 routing system
 
 ( Optional ) Migrate to the new Adonis 6 routing system. Remove all string-based routes and use [real controller imports](https://docs.adonisjs.com/guides/controllers#lazy-loading-controllers).
-
-## ( Optional ) Migrate from Webpack Encore to Vite
-
-Vite is now the recommended way to build your frontend assets. See the [migration guide](../other/vite_migration.md) to migrate from Webpack Encore to Vite.
 
 ## Update the `start/kernel.ts` file
 
@@ -111,3 +111,15 @@ declare module '@adonisjs/core/types' {
 ## Migrate edge breaking changes
 
 AdonisJS 6 comes with a new version of Edge. See the [Edge migration guide](https://edgejs.dev/docs/changelog/upgrading-to-v6) and update your views accordingly.
+
+## Webpack Encore
+
+If you were using Webpack encore, we have created a `@adonisjs/encore` package that adds support for Webpack Encore in AdonisJS 6. But we highly recommend you to migrate to Vite as soon as possible, see the [migration guide](../other/vite_migration.md).
+
+If you want to stick with Webpack Encore for now, make sure to install `@adonisjs/encore` and run the following command:
+
+```sh
+node ace configure @adonisjs/encore
+```
+
+Also make sure to rename your `webpack.config.js` file to `webpack.config.cjs` and also `postcss.config.js` to `postcss.config.cjs`.
