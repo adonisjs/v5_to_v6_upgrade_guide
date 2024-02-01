@@ -34,7 +34,7 @@ If you want to stick to v5, you should have the same major versions as the follo
   "@adonisjs/lucid": "^18.4.2",
   "@adonisjs/mail": "^8.2.1",
   "@adonisjs/redis": "^7.3.4",
-  "@adonisjs/repl": "^4.0.0",
+  "@adonisjs/repl": "^3.1.11",
   "@adonisjs/route-model-binding": "^1.0.1",
   "@adonisjs/session": "^6.4.0",
   "@adonisjs/shield": "^7.1.1",
