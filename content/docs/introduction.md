@@ -38,4 +38,4 @@ Apart of individual breaking changes across different packages, AdonisJS has mov
 
 All these changes combined does not break the internal APIs of existing modules. However, they do require manual labour to replace existing import paths with new import paths.
 
-To make this journey simpler, you should use the [upgrade-kit CLI](./migration/upgrade_kit).
+To make this journey simpler, you should use the [upgrade-kit CLI](./migration/upgrade_kit.md).
