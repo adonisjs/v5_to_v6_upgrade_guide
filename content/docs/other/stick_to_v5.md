@@ -1,6 +1,6 @@
 # Sticking to V5
 
-If you are not ready to migrate your application to AdonisJS v5, no worries. Just make sure to pin the following packages to these versions. Major versions above will be for AdonisJS 6 only.
+If you are not ready to migrate your application to AdonisJS v6, no worries. Just make sure to pin the following packages to these versions. Major versions above will be for AdonisJS 6 only.
 
 If you want to stick to v5, you should have the same major versions as the following :
 
