@@ -105,6 +105,41 @@ The Http server module has received significant changes. Please refer to the fol
 
 - Rename `i18nManager.getSupportedLocale` to `i18nManager.getSupportedLocaleFor`.
 - Rename `i18nManager.getFallbackLocale` to `i18nManager.getFallbackLocaleFor`.
+- `provideValidatorMessages` config option was removed, in favor of `app/Middleware/DetectUserLocale`:
+  ```ts
+  export default class DetectUserLocaleMiddleware {
+    static {
+      RequestValidator.messagesProvider = (ctx) => {
+        return ctx.i18n.createMessagesProvider()
+      }
+    }
+  }
+  ```
+- Other config options (located at `config.i18n.ts`) changed:
+  ```ts
+  // Earlier
+  import { I18nConfig } from '@ioc:Adonis/Addons/I18n'
+  const i18nConfig: I18nConfig = {
+    translationsFormat: 'icu',
+    loaders: {
+      fs: {
+        enabled: true,
+        location: app.resourcesPath('lang'),
+      },
+    },
+  }
+
+  // Now
+  import { defineConfig, formatters, loaders } from '@adonisjs/i18n'
+  const i18nConfig = defineConfig({
+    formatter: formatters.icu(),
+    loaders: [
+      loaders.fs({
+        location: app.languageFilesPath()
+      })
+    ],
+  })
+  ```
 
 ## Redis
 
