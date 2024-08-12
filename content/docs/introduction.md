@@ -19,11 +19,9 @@ If you maintain a package and need help with migrating your package to be compat
 
 If your applications relies on the following packages, then please wait for another few weeks as we get these packages compatible with v6.
 
-- [Drive](http://github.com/adonisjs/drive)
 - [Attachment lite](https://github.com/adonisjs/attachment-lite)
 - [Lucid Slugify](https://github.com/adonisjs/lucid-slugify)
 - [Route model binding](https://github.com/adonisjs/route-model-binding)
-- **Health checks** - Removed from core to be its own package.
 
 ## What's changed?
 
